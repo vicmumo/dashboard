@@ -29,7 +29,9 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
     Route::post('product_tags_mass_destroy', ['uses' => 'Admin\ProductTagsController@massDestroy', 'as' => 'product_tags.mass_destroy']);
     Route::resource('products', 'Admin\ProductsController');
     Route::post('products_mass_destroy', ['uses' => 'Admin\ProductsController@massDestroy', 'as' => 'products.mass_destroy']);
-
+//for movie db
+Route::post('/movie','ApiController@Create');
+//when we use the contoller movie, it calls the Apicontroller @create. kapich? //now go back to the cntoller, you just set a route.
 
 
  
